@@ -1,0 +1,258 @@
+<!DOCTYPE html><html><head><base href="https://rentcar.ma/offres"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos Offres - LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: 
+      url('https://static-content-live.caricarz.com/media_library/post/5360/5822783/6-5-full_normal.jpg'),
+      url('https://www.youhuauto.com/cdn/shop/files/WH_2508x1672px_1ea9ac98-6df1-401e-bd83-57d0894873b4_1024x1024.webp?v=1716516100'),
+      url('https://carnewschina.com/wp-content/uploads/2023/09/Wuling-Bingo-EV-410km-Range-Version.jpg');
+    background-size: 33% auto;
+    background-position: left top, center center, right bottom;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    filter: grayscale(100%);
+  }
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  header h1 {
+    margin: 0;
+    cursor: pointer;
+  }
+  nav {
+    background-color: #0a9396;
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .offers-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .offer-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .offer-card h2 {
+    color: #005f73;
+    margin-top: 0;
+  }
+  .offer-card ul {
+    padding-left: 1.5rem;
+    flex-grow: 1;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: #ee9b00;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: auto;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-weight: bold;
+  }
+  .cta-button:hover {
+    background-color: #ca6702;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  .offer-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  .offer-image:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+    .offers-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .breadcrumb {
+    background-color: #e9d8a6;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .breadcrumb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breadcrumb li {
+    display: inline;
+    font-size: 0.9rem;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 0.5rem;
+    color: #005f73;
+  }
+  .breadcrumb a {
+    color: #005f73;
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" fill="#005f73"></circle>
+      <path d="M40 100 Q 70 40, 100 40 Q 130 40, 160 100 Q 130 160, 100 160 Q 70 160, 40 100 Z" fill="#0a9396"></path>
+      <circle cx="100" cy="100" r="30" fill="#94d2bd"></circle>
+      <path d="M85 100 L 115 100 M100 85 L 100 115" stroke="#e9d8a6" stroke-width="8" stroke-linecap="round"></path>
+      <path d="M60 120 Q 80 140, 100 140 Q 120 140, 140 120" fill="none" stroke="#ee9b00" stroke-width="8" stroke-linecap="round"></path>
+    </svg>
+    <h1>LOC ELECAR Maroc - Nos Offres</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosvehicules">Nos véhicules</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/tarifs">Tarifs</a></li>
+      <li><a href="/offres">Nos offres</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/reservations">Réservations</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li>Nos offres</li>
+    </ul>
+  </div>
+  <main>
+    <h2>Découvrez nos offres de location adaptées à vos besoins</h2>
+    <div class="offers-container">
+      <div class="offer-card">
+        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Voiture électrique compacte pour l'offre classique" class="offer-image">
+        <h2>Offre Classique</h2>
+        <ul>
+          <li>Location courte durée (1 à 30 jours)</li>
+          <li>Assurance de base incluse</li>
+          <li>Assistance routière 24/7</li>
+          <li>Kilométrage illimité</li>
+          <li>Choix parmi notre gamme de véhicules standard</li>
+        </ul>
+        <a href="/reservations?offer=classique" class="cta-button">Réserver une offre classique</a>
+      </div>
+      <div class="offer-card">
+        <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1631&amp;q=80" alt="Voiture électrique premium pour l'offre premium" class="offer-image">
+        <h2>Offre Premium</h2>
+        <ul>
+          <li>Location courte durée (1 à 30 jours)</li>
+          <li>Assurance tous risques incluse</li>
+          <li>Assistance routière VIP 24/7</li>
+          <li>Kilométrage illimité</li>
+          <li>Accès à notre gamme de véhicules haut de gamme</li>
+          <li>Service de livraison et de récupération du véhicule</li>
+        </ul>
+        <a href="https://websim.ai/@winterrain67234225/resaoffrepremium" class="cta-button">Réserver une offre premium</a>
+      </div>
+      <div class="offer-card">
+        <img src="https://images.unsplash.com/photo-1617886910698-4a9e8c9c3c09?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Voiture électrique familiale pour la location longue durée" class="offer-image">
+        <h2>Location Longue Durée</h2>
+        <ul>
+          <li>Contrats de 3 à 36 mois</li>
+          <li>Tarifs préférentiels pour les engagements longue durée</li>
+          <li>Assurance et entretien inclus</li>
+          <li>Option d'achat du véhicule en fin de contrat</li>
+          <li>Renouvellement régulier de la flotte</li>
+        </ul>
+        <a href="/reservations?offer=longue-duree" class="cta-button">Demander un devis LLD</a>
+      </div>
+      <div class="offer-card">
+        <img src="https://images.unsplash.com/photo-1632707631438-f33e51d67f4a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Flotte de voitures électriques pour l'offre entreprise" class="offer-image">
+        <h2>Location Entreprise</h2>
+        <ul>
+          <li>Solutions adaptées aux besoins des professionnels</li>
+          <li>Gestion de flotte personnalisée</li>
+          <li>Tarifs négociés en fonction du volume</li>
+          <li>Reporting et suivi des consommations</li>
+          <li>Formation à l'éco-conduite pour vos employés</li>
+        </ul>
+        <a href="/contact?subject=offre-entreprise" class="cta-button">Contacter notre service entreprise</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('header h1');
+      header.addEventListener('click', function() {
+        window.location.href = 'https://websim.ai/@winterrain67234225/rentcar-ma-nos-vehicules';
+      });
+    });
+  </script>
+</body></html>

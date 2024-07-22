@@ -1,0 +1,274 @@
+<!DOCTYPE html><html><head><base href="https://rentcar.ma/reservations"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservations - LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav {
+    background-color: #0a9396;
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .form-container {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 2rem;
+  }
+  .image-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .car-image, .eco-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  .eco-image {
+    filter: brightness(110%) saturate(90%) contrast(90%);
+    transition: filter 0.3s ease;
+  }
+  .eco-image:hover {
+    filter: brightness(100%) saturate(100%) contrast(100%);
+  }
+  .eco-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #005f73;
+    padding: 1rem;
+    background-color: #e9d8a6;
+    border-radius: 8px;
+  }
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+  label {
+    font-weight: bold;
+  }
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    background-color: #ee9b00;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #ca6702;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  .breadcrumb {
+    background-color: #e9d8a6;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  .breadcrumb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breadcrumb li {
+    margin-right: 0.5rem;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.5rem;
+    color: #005f73;
+  }
+  .breadcrumb a {
+    color: #005f73;
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" fill="#005f73"></circle>
+      <path d="M40 100 Q 70 40, 100 40 Q 130 40, 160 100 Q 130 160, 100 160 Q 70 160, 40 100 Z" fill="#0a9396"></path>
+      <circle cx="100" cy="100" r="30" fill="#94d2bd"></circle>
+      <path d="M85 100 L 115 100 M100 85 L 100 115" stroke="#e9d8a6" stroke-width="8" stroke-linecap="round"></path>
+      <path d="M60 120 Q 80 140, 100 140 Q 120 140, 140 120" fill="none" stroke="#ee9b00" stroke-width="8" stroke-linecap="round"></path>
+    </svg>
+    <h1>LOC ELECAR Maroc - Réservations</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="https://ebsim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosvehicules">Nos véhicules</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/tarifs">Tarifs</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosoffres">Nos offres</a></li>
+      <li><a href="/reservations">Réservations</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="https://ebsim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li>Réservations</li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="form-container">
+      <h2>Réserver votre véhicule électrique</h2>
+      <form action="/process-reservation" method="POST">
+        <div>
+          <label for="vehicle">Choisissez votre véhicule :</label>
+          <select id="vehicle" name="vehicle" required="">
+            <option value="">Sélectionnez un véhicule</option>
+            <option value="wuling-bingo-light">Wuling Bingo 2023 203 km Light Edition</option>
+            <option value="wuling-bingo-lingxi">Wuling Bingo 2023 410 km Lingxi Exclusive Edition</option>
+            <option value="byd-dolphin-free">BYD Dolphin 2023 420 km Free Edition</option>
+            <option value="byd-dolphin-rider">BYD Dolphin 2023 401 km Rider Edition</option>
+            <option value="yuan-plus-leading">Yuan Plus 2023 Championship Version 430 km Leading Version</option>
+            <option value="yuan-plus-top">Yuan Plus 2023 Championship Version 510 km Top Version</option>
+          </select>
+        </div>
+        <div>
+          <label for="pickup-date">Date de prise en charge :</label>
+          <input type="date" id="pickup-date" name="pickup-date" required="">
+        </div>
+        <div>
+          <label for="return-date">Date de retour :</label>
+          <input type="date" id="return-date" name="return-date" required="">
+        </div>
+        <div>
+          <label for="pickup-location">Lieu de prise en charge :</label>
+          <select id="pickup-location" name="pickup-location" required="">
+            <option value="">Sélectionnez un lieu</option>
+            <option value="casablanca">Casablanca</option>
+            <option value="rabat">Rabat</option>
+            <option value="marrakech">Marrakech</option>
+            <option value="agadir">Agadir</option>
+          </select>
+        </div>
+        <div>
+          <label for="return-location">Lieu de retour :</label>
+          <select id="return-location" name="return-location" required="">
+            <option value="">Sélectionnez un lieu</option>
+            <option value="casablanca">Casablanca</option>
+            <option value="rabat">Rabat</option>
+            <option value="marrakech">Marrakech</option>
+            <option value="agadir">Agadir</option>
+          </select>
+        </div>
+        <div>
+          <label for="fullname">Nom complet :</label>
+          <input type="text" id="fullname" name="fullname" required="">
+        </div>
+        <div>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required="">
+        </div>
+        <div>
+          <label for="phone">Téléphone :</label>
+          <input type="tel" id="phone" name="phone" required="">
+        </div>
+        <button type="submit">Réserver maintenant</button>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="https://carnewschina.com/wp-content/uploads/2023/09/Wuling-Bingo-EV-410km-Range-Version.jpg" alt="Wuling Bingo EV 410km Range Version" class="car-image" width="450" height="300">
+      <p class="eco-message">Ensemble, roulons vers un avenir plus vert ! Choisissez l'électrique pour préserver notre planète.</p>
+      <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1740&amp;q=80" alt="Voiture électrique dans un environnement naturel" class="eco-image" width="450" height="300">
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const vehicle = document.getElementById('vehicle').value;
+        const pickupDate = document.getElementById('pickup-date').value;
+        const returnDate = document.getElementById('return-date').value;
+        const fullname = document.getElementById('fullname').value;
+        
+        alert(`Merci ${fullname} pour votre réservation du ${vehicle} du ${pickupDate} au ${returnDate}. Nous traiterons votre demande dans les plus brefs délais.`);
+      });
+    });
+  </script>
+</body></html>

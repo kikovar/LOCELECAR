@@ -1,0 +1,178 @@
+<html><head><base href="https://rentcar.ma/reservations?vehicle=wuling-bingo-lingxi"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation - Wuling Bingo 2023 410 km Lingxi Exclusive Edition | LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  nav {
+    background-color: #0a9396;
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .vehicle-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .vehicle-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin-top: 1rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    background-color: #ee9b00;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #ca6702;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>LOC ELECAR Maroc - Réservation</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="/accueil">Accueil</a></li>
+      <li><a href="/vehicules">Nos véhicules</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
+      <li><a href="/reservations">Réservations</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="vehicle-info">
+      <h2>Wuling Bingo 2023 410 km Lingxi Exclusive Edition</h2>
+      <img src="https://carnewchina.com/wp-content/uploads/2023/09/Wuling-Bingo-EV-410km-Range-Version.jpg" alt="Wuling Bingo 2023 410 km Lingxi Exclusive Edition" class="vehicle-image">
+      <p>La Wuling Bingo 2023 410 km Lingxi Exclusive Edition est un véhicule électrique compact et élégant, parfait pour la ville et les longs trajets. Avec son autonomie de 410 km, elle vous offre une liberté de mouvement inégalée.</p>
+      <ul>
+        <li>Autonomie : 410 km</li>
+        <li>Puissance : 55 kW (75 ch)</li>
+        <li>Batterie : 37 kWh</li>
+        <li>Temps de charge (0-80%) : environ 30 minutes (charge rapide DC)</li>
+        <li>Vitesse maximale : 150 km/h</li>
+      </ul>
+    </div>
+    <form action="/process-reservation" method="POST">
+      <h3>Formulaire de réservation</h3>
+      <input type="hidden" name="vehicle" value="wuling-bingo-lingxi">
+      
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+      
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+      
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="telephone">Téléphone :</label>
+      <input type="tel" id="telephone" name="telephone" required>
+      
+      <label for="date-debut">Date de début de location :</label>
+      <input type="date" id="date-debut" name="date-debut" required>
+      
+      <label for="date-fin">Date de fin de location :</label>
+      <input type="date" id="date-fin" name="date-fin" required>
+      
+      <label for="lieu-prise">Lieu de prise en charge :</label>
+      <select id="lieu-prise" name="lieu-prise" required>
+        <option value="">Choisissez un lieu</option>
+        <option value="casablanca">Casablanca</option>
+        <option value="rabat">Rabat</option>
+        <option value="marrakech">Marrakech</option>
+        <option value="tanger">Tanger</option>
+      </select>
+      
+      <label for="lieu-retour">Lieu de retour :</label>
+      <select id="lieu-retour" name="lieu-retour" required>
+        <option value="">Choisissez un lieu</option>
+        <option value="casablanca">Casablanca</option>
+        <option value="rabat">Rabat</option>
+        <option value="marrakech">Marrakech</option>
+        <option value="tanger">Tanger</option>
+      </select>
+      
+      <button type="submit">Réserver maintenant</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Merci pour votre réservation ! Nous vous contacterons bientôt pour confirmer les détails.');
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,172 @@
+<html><head><base href="https://rentcar.ma/reservations?vehicle=byd-dolphin-rider"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation BYD Dolphin Rider - LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  nav {
+    background-color: #0a9396;
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .vehicle-info {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .vehicle-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  form {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  button {
+    background-color: #ee9b00;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #ca6702;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>LOC ELECAR Maroc</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosvehicules">Nos véhicules</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosoffres">Nos offres</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/reservations">Réservations</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Réservation - BYD Dolphin 2023 401 km Rider Edition</h2>
+    <div class="vehicle-info">
+      <img src="https://images.carandbike.com/car-images/big/byd/dolphin/byd-dolphin.jpg?v=1" alt="BYD Dolphin 2023 Rider Edition" class="vehicle-image">
+      <h3>BYD Dolphin 2023 401 km Rider Edition</h3>
+      <p>Le BYD Dolphin Rider Edition est un véhicule électrique compact offrant une autonomie impressionnante de 401 km. Parfait pour la conduite en ville et les trajets plus longs, il allie confort, performance et respect de l'environnement.</p>
+      <ul>
+        <li>Autonomie : 401 km</li>
+        <li>Puissance : 150 kW (204 ch)</li>
+        <li>Batterie : 60.48 kWh</li>
+        <li>0-100 km/h : 7 secondes</li>
+        <li>Vitesse max : 160 km/h</li>
+      </ul>
+    </div>
+    <form action="/submit-reservation" method="POST">
+      <input type="hidden" name="vehicle" value="byd-dolphin-rider">
+      <label for="pickup-date">Date de prise en charge :</label>
+      <input type="date" id="pickup-date" name="pickup-date" required>
+      
+      <label for="return-date">Date de retour :</label>
+      <input type="date" id="return-date" name="return-date" required>
+      
+      <label for="pickup-location">Lieu de prise en charge :</label>
+      <select id="pickup-location" name="pickup-location" required>
+        <option value="">Sélectionnez un lieu</option>
+        <option value="casablanca">Casablanca</option>
+        <option value="rabat">Rabat</option>
+        <option value="marrakech">Marrakech</option>
+        <option value="agadir">Agadir</option>
+      </select>
+      
+      <label for="return-location">Lieu de retour :</label>
+      <select id="return-location" name="return-location" required>
+        <option value="">Sélectionnez un lieu</option>
+        <option value="casablanca">Casablanca</option>
+        <option value="rabat">Rabat</option>
+        <option value="marrakech">Marrakech</option>
+        <option value="agadir">Agadir</option>
+      </select>
+      
+      <label for="full-name">Nom complet :</label>
+      <input type="text" id="full-name" name="full-name" required>
+      
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="phone">Numéro de téléphone :</label>
+      <input type="tel" id="phone" name="phone" required>
+      
+      <button type="submit">Réserver maintenant</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Merci pour votre réservation ! Nous vous contacterons bientôt pour confirmer les détails.');
+      });
+    });
+  </script>
+</body></html>

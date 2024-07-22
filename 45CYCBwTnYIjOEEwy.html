@@ -1,0 +1,340 @@
+<html><head><base href="https://rentcar.ma/reservations?vehicle=yuan-plus-top"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation - LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://carnewschina.com/wp-content/uploads/2023/09/Wuling-Bingo-EV-410km-Range-Version.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  header {
+    background-color: rgba(0, 95, 115, 0.9);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  header h1 {
+    margin: 0;
+    cursor: pointer;
+  }
+  nav {
+    background-color: rgba(10, 147, 150, 0.9);
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #e9d8a6;
+  }
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .breadcrumb {
+    background-color: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breadcrumb li {
+    display: inline;
+  }
+  .breadcrumb li + li::before {
+    content: "/";
+    padding: 0 0.5rem;
+    color: #6c757d;
+  }
+  .breadcrumb a {
+    color: #0a9396;
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  .reservation-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .submit-button {
+    background-color: #ee9b00;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .submit-button:hover {
+    background-color: #ca6702;
+  }
+  .vehicle-info {
+    background-color: rgba(233, 216, 166, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  .vehicle-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .vehicle-specs div {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  .vehicle-specs h4 {
+    margin: 0 0 0.5rem 0;
+    color: #005f73;
+  }
+  footer {
+    background-color: rgba(0, 95, 115, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" fill="#005f73"/>
+      <path d="M40 100 Q 70 40, 100 40 Q 130 40, 160 100 Q 130 160, 100 160 Q 70 160, 40 100 Z" fill="#0a9396"/>
+      <circle cx="100" cy="100" r="30" fill="#94d2bd"/>
+      <path d="M85 100 L 115 100 M100 85 L 100 115" stroke="#e9d8a6" stroke-width="8" stroke-linecap="round"/>
+      <path d="M60 120 Q 80 140, 100 140 Q 120 140, 140 120" fill="none" stroke="#ee9b00" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <h1>LOC ELECAR Maroc - Réservation par véhicule</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/rentcar-ma-nos-vehicules">Accueil</a></li>
+      <li><a href="/nos-vehicules">Nos véhicules</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
+      <li><a href="/nos-offres">Nos offres</a></li>
+      <li><a href="/reservations">Réservations</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol>
+      <li><a href="https://websim.ai/@winterrain67234225/rentcar-ma-nos-vehicules">Accueil</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
+      <li aria-current="page">Yuan 510</li>
+    </ol>
+  </nav>
+  <main>
+    <h2>Réservation de votre véhicule électrique</h2>
+    <div class="vehicle-info">
+      <h3>Véhicule sélectionné : Yuan Plus 2023 Championship Version 510 km Top Version</h3>
+      <p>Tarif journalier : 700 MAD</p>
+      <p>Tarif hebdomadaire : 4200 MAD</p>
+      <p>Tarif mensuel : 14000 MAD</p>
+      <div class="vehicle-specs">
+        <div>
+          <h4>Autonomie</h4>
+          <p>510 km (NEDC)</p>
+        </div>
+        <div>
+          <h4>Batterie</h4>
+          <p>71.4 kWh LFP</p>
+        </div>
+        <div>
+          <h4>Puissance</h4>
+          <p>150 kW (204 ch)</p>
+        </div>
+        <div>
+          <h4>0-100 km/h</h4>
+          <p>7.3 secondes</p>
+        </div>
+        <div>
+          <h4>Vitesse max</h4>
+          <p>180 km/h</p>
+        </div>
+        <div>
+          <h4>Recharge rapide</h4>
+          <p>30-80% en 30 min</p>
+        </div>
+        <div>
+          <h4>Places</h4>
+          <p>5</p>
+        </div>
+        <div>
+          <h4>Coffre</h4>
+          <p>448 L</p>
+        </div>
+      </div>
+    </div>
+    <form class="reservation-form" action="/submit-reservation" method="POST">
+      <input type="hidden" name="vehicle" value="yuan-plus-top">
+      <div class="form-group">
+        <label for="fullname">Nom complet :</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="pickup-date">Date de prise en charge :</label>
+        <input type="date" id="pickup-date" name="pickup-date" required>
+      </div>
+      <div class="form-group">
+        <label for="return-date">Date de retour :</label>
+        <input type="date" id="return-date" name="return-date" required>
+      </div>
+      <div class="form-group">
+        <label for="pickup-location">Lieu de prise en charge :</label>
+        <select id="pickup-location" name="pickup-location" required>
+          <option value="">Choisissez un lieu</option>
+          <option value="casablanca">Casablanca</option>
+          <option value="rabat">Rabat</option>
+          <option value="marrakech">Marrakech</option>
+          <option value="agadir">Agadir</option>
+          <option value="tanger">Tanger</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="return-location">Lieu de retour :</label>
+        <select id="return-location" name="return-location" required>
+          <option value="">Choisissez un lieu</option>
+          <option value="casablanca">Casablanca</option>
+          <option value="rabat">Rabat</option>
+          <option value="marrakech">Marrakech</option>
+          <option value="agadir">Agadir</option>
+          <option value="tanger">Tanger</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="additional-info">Informations complémentaires :</label>
+        <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+      </div>
+      <button type="submit" class="submit-button">Réserver maintenant</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('header h1');
+      header.addEventListener('click', function() {
+        window.location.href = 'https://websim.ai/@winterrain67234225/rentcar-ma-nos-vehicules';
+      });
+
+      // Calculer le prix total en fonction des dates sélectionnées
+      const pickupDate = document.getElementById('pickup-date');
+      const returnDate = document.getElementById('return-date');
+      const form = document.querySelector('.reservation-form');
+
+      function calculateTotalPrice() {
+        const start = new Date(pickupDate.value);
+        const end = new Date(returnDate.value);
+        const diffTime = Math.abs(end - start);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        let totalPrice = 0;
+        if (diffDays <= 7) {
+          totalPrice = diffDays * 700; // Prix journalier
+        } else if (diffDays <= 30) {
+          totalPrice = Math.ceil(diffDays / 7) * 4200; // Prix hebdomadaire
+        } else {
+          totalPrice = Math.ceil(diffDays / 30) * 14000; // Prix mensuel
+        }
+
+        // Mettre à jour l'affichage du prix total
+        let priceDisplay = document.getElementById('total-price');
+        if (!priceDisplay) {
+          priceDisplay = document.createElement('p');
+          priceDisplay.id = 'total-price';
+          form.insertBefore(priceDisplay, form.querySelector('button'));
+        }
+        priceDisplay.textContent = `Prix total estimé : ${totalPrice} MAD`;
+      }
+
+      pickupDate.addEventListener('change', calculateTotalPrice);
+      returnDate.addEventListener('change', calculateTotalPrice);
+    });
+  </script>
+</body></html>

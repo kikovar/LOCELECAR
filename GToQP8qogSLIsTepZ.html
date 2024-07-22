@@ -1,0 +1,354 @@
+<!DOCTYPE html><html><head><base href="https://rentcar.ma/accueil"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOC ELECAR Maroc - Véhicules Électriques</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+  }
+  header {
+    background-color: rgba(196, 69, 54, 0.9);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  .logo svg {
+    width: 80px;
+    height: 80px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  h1:hover {
+    transform: scale(1.05);
+  }
+  nav {
+    background-color: rgba(119, 46, 37, 0.9);
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .hero {
+    background-color: rgba(240, 240, 240, 0.9);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .hero-content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    color: #c44536;
+    margin-bottom: 1rem;
+  }
+  .hero-image {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .search-form {
+    background-color: rgba(255,255,255,0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .search-form h3 {
+    margin-top: 0;
+    color: #c44536;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #c44536;
+  }
+  .form-group input, .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  .form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #c44536;
+  }
+  button {
+    background-color: #197278;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #155e63;
+    transform: translateY(-2px);
+  }
+  .features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  .feature {
+    flex-basis: 30%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  .feature svg {
+    width: 100px;
+    height: 100px;
+  }
+  footer {
+    background-color: rgba(196, 69, 54, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  .morocco-map {
+    width: 100px;
+    height: 100px;
+  }
+  .reserve-button {
+    background-color: #197278;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .reserve-button:hover {
+    background-color: #155e63;
+    transform: scale(1.05);
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .hero-image:hover img {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="48" fill="#197278"></circle>
+        <path d="M20,50 Q35,20 50,20 T80,50 T50,80 T20,50" fill="#c44536" stroke="#fff" stroke-width="2"></path>
+        <circle cx="35" cy="50" r="8" fill="#fff"></circle>
+        <circle cx="65" cy="50" r="8" fill="#fff"></circle>
+        <path d="M30,70 Q50,80 70,70" fill="none" stroke="#fff" stroke-width="4"></path>
+        <path d="M40,30 L60,30" stroke="#fff" stroke-width="4"></path>
+        <circle cx="50" cy="50" r="3" fill="#ffd700"></circle>
+        <path d="M50,47 L50,35" stroke="#ffd700" stroke-width="2"></path>
+      </svg>
+    </div>
+    <h1>
+  <a href="https://websim.ai/@winterrain67234225/quisommesnous" style="color: inherit; text-decoration: none;">LOC ELECAR Maroc - Véhicules Électriques</a>
+</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/nosvehicules">Nos véhicules</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/tarifs">Tarifs</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosoffres">Nos offres</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/reservations">Réservations</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Explorez le Maroc avec style</h2>
+        <p>Découvrez notre gamme de véhicules électriques pour une aventure éco-responsable à travers les magnifiques paysages du Maroc.</p>
+        <a href="https://websim.ai/@winterrain67234225/quisommesnous" class="reserve-button">Qui sommes nous ?</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Paysage marocain avec des dunes de sable et un ciel bleu" width="600" height="400">
+      </div>
+    </section>
+    <section class="search-form">
+      <h3>Trouvez votre véhicule idéal</h3>
+      <form action="/recherche" method="GET">
+        <div class="form-group">
+          <label for="lieu">Lieu de prise en charge</label>
+          <input type="text" id="lieu" name="lieu" required="" placeholder="Ex: Casablanca, Marrakech...">
+        </div>
+        <div class="form-group">
+          <label for="date-debut">Date de début</label>
+          <input type="date" id="date-debut" name="date-debut" required="">
+        </div>
+        <div class="form-group">
+          <label for="date-fin">Date de fin</label>
+          <input type="date" id="date-fin" name="date-fin" required="">
+        </div>
+        <div class="form-group">
+          <label for="type-vehicule">Type de véhicule</label>
+          <select id="type-vehicule" name="type-vehicule">
+            <option value="">Tous les types</option>
+            <option value="citadine">Citadine</option>
+            <option value="berline">Berline</option>
+            <option value="suv">SUV</option>
+            <option value="4x4">4x4</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="type-prestation">Type de prestation</label>
+          <select id="type-prestation" name="type-prestation">
+            <option value="">Choisir une prestation</option>
+            <option value="standard">Location standard</option>
+            <option value="longue-duree">Location longue durée</option>
+            <option value="avec-chauffeur">Location avec chauffeur</option>
+            <option value="entreprise">Location pour entreprise</option>
+          </select>
+        </div>
+        <button type="submit">Rechercher</button>
+      </form>
+    </section>
+    <section class="features">
+      <div class="feature">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="40" width="80" height="30" rx="5" fill="#c44536"></rect>
+          <circle cx="30" cy="70" r="10" fill="#772e25"></circle>
+          <circle cx="70" cy="70" r="10" fill="#772e25"></circle>
+          <rect x="20" y="20" width="60" height="20" rx="5" fill="#197278"></rect>
+          <circle cx="35" cy="30" r="5" fill="#fff"></circle>
+          <circle cx="65" cy="30" r="5" fill="#fff"></circle>
+        </svg>
+        <h3>Large choix de véhicules</h3>
+        <p>Des citadines aux 4x4, trouvez le véhicule parfait pour votre aventure marocaine.</p>
+      </div>
+      <div class="feature">
+        <svg class="morocco-map" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10,50 Q25,20 50,10 T90,50 T50,90 T10,50" fill="#c44536" stroke="#772e25" stroke-width="2"></path>
+          <path d="M25,40 l5,-3 l3,5 l-5,3 l-3,-5" fill="#006233"></path>
+          <path d="M60,30 l5,-3 l3,5 l-5,3 l-3,-5" fill="#006233"></path>
+          <path d="M75,60 l5,-3 l3,5 l-5,3 l-3,-5" fill="#006233"></path>
+          <path d="M40,70 l5,-3 l3,5 l-5,3 l-3,-5" fill="#006233"></path>
+        </svg>
+        <h3>Prise en charge partout au Maroc</h3>
+        <p>Avec nos nombreuses agences, louez où vous voulez au Maroc.</p>
+      </div>
+      <div class="feature">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="35" r="25" fill="#c44536"></circle>
+          <path d="M25,70 Q50,95 75,70" fill="none" stroke="#772e25" stroke-width="8"></path>
+          <circle cx="40" cy="30" r="5" fill="#fff"></circle>
+          <circle cx="60" cy="30" r="5" fill="#fff"></circle>
+          <path d="M40,45 Q50,55 60,45" fill="none" stroke="#fff" stroke-width="3"></path>
+        </svg>
+        <h3>Service client 24/7</h3>
+        <p>Notre équipe locale est à votre disposition à tout moment pour vous assister.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const lieu = document.getElementById('lieu').value;
+        const dateDebut = document.getElementById('date-debut').value;
+        const dateFin = document.getElementById('date-fin').value;
+        const typeVehicule = document.getElementById('type-vehicule').value;
+        const typePrestation = document.getElementById('type-prestation').value;
+        
+        alert(`Recherche en cours pour :\nLieu au Maroc : ${lieu}\nDu ${dateDebut} au ${dateFin}\nType de véhicule : ${typeVehicule || 'Tous'}\nType de prestation : ${typePrestation || 'Non spécifié'}`);
+        // Ici, vous pourriez rediriger vers une page de résultats ou effectuer une requête AJAX
+      });
+
+      const mainTitle = document.querySelector('h1');
+      mainTitle.addEventListener('click', function() {
+        alert("Bienvenue chez LOC ELECAR Maroc, votre partenaire de confiance pour la location de véhicules électriques au Maroc!");
+      });
+      
+      const logo = document.querySelector('.logo');
+      logo.addEventListener('click', function() {
+        alert("Notre logo représente notre engagement envers une mobilité électrique au Maroc. Le vert symbolise l'écologie, la forme de voiture représente notre service de location, et l'étoile dorée évoque le drapeau marocain et l'excellence de notre service.");
+      });
+    });
+  </script>
+</body></html>

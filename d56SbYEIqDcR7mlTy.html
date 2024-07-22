@@ -1,0 +1,273 @@
+<!DOCTYPE html><html><head><base href="https://rentcar.ma/tarifs"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs - LOC ELECAR Maroc</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: 
+      url('https://static-content-live.caricarz.com/media_library/post/5360/5822783/6-5-full_normal.jpg'),
+      url('https://www.youhuauto.com/cdn/shop/files/WH_2508x1672px_1ea9ac98-6df1-401e-bd83-57d0894873b4_1024x1024.webp?v=1716516100'),
+      url('https://carnewschina.com/wp-content/uploads/2023/09/Wuling-Bingo-EV-410km-Range-Version.jpg');
+    background-size: 33% auto;
+    background-position: left top, center center, right bottom;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    filter: grayscale(100%);
+  }
+  header {
+    background-color: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+  }
+  header h1 {
+    margin: 0;
+    cursor: pointer;
+  }
+  nav {
+    background-color: #0a9396;
+    padding: 0.5rem;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin: 0.5rem 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #e9d8a6;
+  }
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .pricing-table th, .pricing-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: left;
+  }
+  .pricing-table th {
+    background-color: #0a9396;
+    color: white;
+  }
+  .pricing-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .pricing-info {
+    background-color: #e9d8a6;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  .cta-button, .reserve-button {
+    display: inline-block;
+    background-color: #ee9b00;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  .cta-button:hover, .reserve-button:hover {
+    background-color: #ca6702;
+  }
+  footer {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  .breadcrumb {
+    background-color: #e9d8a6;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  .breadcrumb ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .breadcrumb li {
+    margin-right: 0.5rem;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.5rem;
+    color: #005f73;
+  }
+  .breadcrumb a {
+    color: #005f73;
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="90" fill="#005f73"></circle>
+      <path d="M40 100 Q 70 40, 100 40 Q 130 40, 160 100 Q 130 160, 100 160 Q 70 160, 40 100 Z" fill="#0a9396"></path>
+      <circle cx="100" cy="100" r="30" fill="#94d2bd"></circle>
+      <path d="M85 100 L 115 100 M100 85 L 100 115" stroke="#e9d8a6" stroke-width="8" stroke-linecap="round"></path>
+      <path d="M60 120 Q 80 140, 100 140 Q 120 140, 140 120" fill="none" stroke="#ee9b00" stroke-width="8" stroke-linecap="round"></path>
+    </svg>
+    <h1>LOC ELECAR Maroc - Tarifs</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosvehicules">Nos véhicules</a></li>
+      <li><a href="/tarifs">Tarifs</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/nosoffres">Nos offres</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/reservations">Réservations</a></li>
+      <li><a href="https://websim.ai/@winterrain67234225/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="breadcrumb">
+    <ul>
+      <li><a href="https://websim.ai/@winterrain67234225/accueil">Accueil</a></li>
+      <li>Tarifs</li>
+    </ul>
+  </div>
+  <main>
+    <h2>Nos Tarifs de Location</h2>
+    <p>Découvrez nos tarifs compétitifs pour la location de véhicules électriques. Nous proposons des options flexibles pour répondre à tous vos besoins de mobilité.</p>
+    
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Véhicule</th>
+          <th>Tarif journalier</th>
+          <th>Tarif hebdomadaire</th>
+          <th>Tarif mensuel</th>
+          <th>Réserver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Wuling Bingo 2023 203 km Light Edition</td>
+          <td>350 MAD</td>
+          <td>2100 MAD</td>
+          <td>7000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/resawuling204" class="reserve-button">Réserver</a></td>
+        </tr>
+        <tr>
+          <td>Wuling Bingo 2023 410 km Lingxi Exclusive Edition</td>
+          <td>400 MAD</td>
+          <td>2400 MAD</td>
+          <td>8000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/resawuling410" class="reserve-button">Réserver</a></td>
+        </tr>
+        <tr>
+          <td>BYD Dolphin 2023 420 km Free Edition</td>
+          <td>450 MAD</td>
+          <td>2700 MAD</td>
+          <td>9000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/resabyd420" class="reserve-button">Réserver</a></td>
+        </tr>
+        <tr>
+          <td>BYD Dolphin 2023 401 km Rider Edition</td>
+          <td>500 MAD</td>
+          <td>3000 MAD</td>
+          <td>10000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/resabydrider" class="reserve-button">Réserver</a></td>
+        </tr>
+        <tr>
+          <td>Yuan Plus 2023 Championship Version 430 km Leading Version</td>
+          <td>450 MAD</td>
+          <td>2700 MAD</td>
+          <td>9000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/resayuan430" class="reserve-button">Réserver</a></td>
+        </tr>
+        <tr>
+          <td>Yuan Plus 2023 Championship Version 510 km Top Version</td>
+          <td>700 MAD</td>
+          <td>4200 MAD</td>
+          <td>14000 MAD</td>
+          <td><a href="https://websim.ai/@winterrain67234225/reservationyuan510" class="reserve-button">Réserver</a></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="pricing-info">
+      <h3>Informations importantes sur nos tarifs :</h3>
+      <ul>
+        <li>Tous nos tarifs incluent l'assurance de base et l'assistance routière 24/7.</li>
+        <li>Une caution de 5000 MAD est requise pour toute location.</li>
+        <li>Les tarifs hebdomadaires et mensuels offrent des réductions significatives par rapport aux tarifs journaliers.</li>
+        <li>Des frais supplémentaires peuvent s'appliquer pour les conducteurs de moins de 25 ans.</li>
+        <li>Kilométrage illimité inclus pour toutes les locations.</li>
+        <li>Les tarifs peuvent varier en fonction de la saison et de la disponibilité.</li>
+      </ul>
+    </div>
+    
+    <p>Pour toute demande de devis personnalisé ou pour des locations de longue durée, n'hésitez pas à nous contacter. Nous serons ravis de vous proposer une offre sur mesure.</p>
+    
+    <a href="https://websim.ai/@winterrain67234225/reservations" class="cta-button">Réserver maintenant</a>
+  </main>
+  <footer>
+    <p>© 2023 LOC ELECAR Maroc. Tous droits réservés.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.querySelector('header h1');
+      header.addEventListener('click', function() {
+        window.location.href = 'https://websim.ai/@winterrain67234225/rentcar-ma-nos-vehicules';
+      });
+    });
+  </script>
+</body></html>
